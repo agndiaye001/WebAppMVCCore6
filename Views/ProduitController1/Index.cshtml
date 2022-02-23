@@ -1,0 +1,43 @@
+﻿@model WebAppMVCCore6.Models.Produit;
+
+@{
+   ViewData["Title"] = "Home Page";
+}
+
+<div class = 'text-center'>
+  
+   <div> 
+        <span>Produit</span>
+        <div>reference : </div> @Model.reference
+        <div>quantity : </div>  @Model.quantity
+        <div>price : </div>  @Model.price
+   </div>
+</div>
+
+
+<body>
+  <form method="post">
+    <fieldset>
+      <legend>Puiduit Form</legend>
+      <div>
+         <label for="CompanyName">Company Name:</label>
+         <input type="text" name="CompanyName" value="" />
+         @Html.ValidationMessage("companyname")
+      </div>
+      <div>
+         <label for="ContactName">Contact Name:</label>
+         <input type="text" name="ContactName" value="" />
+         @Html.ValidationMessage("contactname")
+      </div>
+      <div>
+         <label for="Employees">Employee Count:</label>
+         <input type="text" name="Employees" value="" />
+         @Html.ValidationMessage("employees")
+      </div>
+      <div>
+         <label>&nbsp;</label>
+         <input type="submit" value="Submit" class="submit" />
+      </div>
+    </fieldset>
+  </form>
+</body>
